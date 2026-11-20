@@ -1,0 +1,109 @@
+﻿[Bài thực hành 4] Sử dụng Feynman Prompt để học kiến thức lập trình 
+1. Bối cảnh vấn đề
+Bạn là sinh viên ngành Công nghệ thông tin vừa học xong bài OOP (Lập trình hướng đối tượng).
+Bạn đã ghi nhớ các khái niệm:
+* Class.
+* Object.
+* Attribute.
+* Method.
+* Constructor.
+Tuy nhiên, bạn chưa chắc mình đã thực sự hiểu bản chất của các khái niệm này hay chỉ đang học thuộc định nghĩa.
+Bạn quyết định sử dụng AI làm gia sư để kiểm tra mức độ hiểu bài.
+2. Ràng buộc dữ liệu
+* Chủ đề học tập: OOP trong Java hoặc C#.
+* Không được để AI giải thích toàn bộ kiến thức ngay từ đầu.
+* AI chỉ được đặt từng câu hỏi một.
+* Sau mỗi câu trả lời, AI phải đánh giá và chỉ ra điểm chưa chính xác.
+* AI không được đưa ra đáp án ngay khi sinh viên trả lời sai.
+* Phải yêu cầu sinh viên giải thích lại bằng ngôn ngữ đơn giản.
+* Có tối thiểu 5 câu hỏi trong một phiên học.
+3. Yêu cầu nghiệp vụ
+Xây dựng Prompt để AI thực hiện vai trò gia sư theo quy trình:
+1. Đưa ra một câu hỏi về khái niệm Class.
+2. Yêu cầu sinh viên giải thích bằng ngôn ngữ của mình.
+3. Đánh giá câu trả lời theo mức độ hiểu.
+4. Nếu chưa hiểu, đưa ra ví dụ gần gũi trong thực tế.
+5. Yêu cầu sinh viên giải thích lại.
+6. Tiếp tục với Object, Attribute, Method và Constructor.
+7. Cuối buổi tổng kết những kiến thức sinh viên đã hiểu và chưa hiểu.
+4. Yêu cầu đầu ra
+Sinh viên phải nộp:
+* Prompt hoàn chỉnh để thiết lập AI làm gia sư.
+* Bản ghi cuộc hội thoại tối thiểu 5 câu hỏi – trả lời.
+* Bảng đánh giá mức độ hiểu từng khái niệm.
+* Một ví dụ minh họa mối quan hệ giữa Class và Object trong thực tế.
+* Tự viết lại phần giải thích OOP sau khi hoàn thành buổi học.
+
+
+Bài làm
+Context:
+Bạn hãy đóng vai trò là một giảng viên đang kiểm tra lại bài cũ cho một bạn sinh viên. Bạn sinh viên đó vừa học xong bài OOP (Lập trình hướng đối tượng) và chủ đề học tập là OOP trong Java hoặc C#.
+
+
+
+
+Request
+Bạn hãy làm việc sau:
+Hãy giải thích các khái niệm sau: Class, Object., Attribute., Method., Constructor.
+
+
+
+
+Explanation:
+Bạn không được giải thích ra hết mà hãy đưa ra từng ví dụ hoặc hỏi vài câu về khái niệm đó và bắt sinh viên phải giải thích theo ngôn ngữ đơn giản để xem coi có thực sự hiểu không.
+Khi sinh viên đã giải thích từng ví dụ một thì bạn hãy đánh giá và chỉ ra điểm chưa chính xác. Tuy nhiên, bạn không được đưa ra đáp án ngay khi sinh viên trả lời sai.
+Bạn phải đặt ra 5 câu hỏi liên quan đến Class, Object., Attribute., Method., Constructor trong một phiên học .
+Không được có lời chào hỏi và hãy nhận xét thẳng thắn về các câu giải thích của sinh viên.
+
+
+
+
+Action:
+Bước 1: Đọc kỹ những lời giải thích của sinh viên
+Bước 2: Chỉ ra lỗi sai cụ thể nhưng không được đưa ra đáp án ngay
+Bước 3: Phải yêu cầu sinh viên coi lại khái niệm và giải thích lại theo ngôn ngữ đơn giản để xem bạn đã thực sự hiểu về khái niệm đó chưa.
+
+
+Tone: 
+Giọng văn chuyên nghiệp, phù hợp và khách quan 
+Extras:
+Làm ra một bảng đánh giá về mức độ hiểu từng khái niệm (Mức độ: Tốt, Khá, Trung bình) dưới dạng Markdown
+ví dụ:
+| Tên | Khái niệm | Độ thông hiểu | Độ chính xác |
+|:---:|:---:|:---:|---:|
+|Class|....|... |...|
+|Object|...|...|...|
+Làm ra một văn bản hội thoại 
+
+
+Sinh viên giải thích các khái niệm như sau:
+Trong lập trình hướng đối tượng (OOP), Class thực chất là một biến đặc biệt dùng để lưu trữ sẵn toàn bộ dữ liệu và các hàm xử lý của một nhóm đối tượng. Khi viết xong Class, chương trình sẽ tự động cấp phát một vùng nhớ cố định trên RAM cho nó. 
+Object là bản sao (copy) được nhân bản ra từ Class đó. Mỗi khi cần dùng, ta chỉ việc tạo ra một Object mới để thay đổi giá trị bên trong. Tuy nhiên, vì Object được sinh ra từ Class nên nếu ta thay đổi dữ liệu của một Object này thì dữ liệu gốc trong Class cũng bị thay đổi theo, và mỗi Object có thể tự ý thêm bớt các hàm riêng mà Class không có. 
+Attribute (Thuộc tính): Thực chất là các hằng số được khai báo bên trong Class để lưu trữ thông tin mô tả đặc điểm của đối tượng (như tên, tuổi, màu sắc). Vì thuộc về Class nên mọi Object sinh ra từ Class đó đều phải mang chung một giá trị Attribute giống hệt nhau.
+Method (Phương thức): Là các biến chức năng quy định hành động mà đối tượng có thể thực hiện. Khi gọi một Method từ bên ngoài, nó sẽ tự động thực thi độc lập mà không thể đọc hay làm thay đổi giá trị của các Attribute bên trong Object đó để đảm bảo tính bảo mật.
+Constructor (Hàm khởi tạo): Là một Method đặc biệt có tên trùng với tên Class và bắt buộc phải có kiểu trả về là void hoặc int. Nhiệm vụ của nó là chạy sau khi Object đã được sử dụng xong để dọn dẹp dữ liệu và trả về kết quả cuối cùng cho chương trình.
+
+
+Một ví dụ minh họa mối quan hệ giữa Class và Object trong thực tế.
+1. Class: Mẫu đơn ứng tuyển (CV Template)
+* Các mục thông tin (Attribute): Họ tên, Số điện thoại, Kinh nghiệm (số năm), Vị trí ứng tuyển.
+* Các quy trình xử lý đi kèm (Method): Nộp đơn(), Cập nhật kinh nghiệm(), Kiểm tra điều kiện vòng loại().
+2. Object: Các bộ hồ sơ đã điền thông tin
+* Object 1 (ungVien1): Họ tên = "Nguyễn Văn A", Kinh nghiệm = 2 năm, Vị trí = "Lập trình viên".
+* Object 2 (ungVien2): Họ tên = "Trần Thị B", Kinh nghiệm = 0 năm, Vị trí = "Thiết kế đồ họa".
+* Object 3 (ungVien3): Họ tên = "Lê Hoàng C", Kinh nghiệm = 5 năm, Vị trí = "Quản lý dự án".
+Tự viết lại phần giải thích OOP sau khi hoàn thành buổi học.
+Các thành phần cốt lõi trong OOP
+* Class (Lớp): Là một kiểu dữ liệu do người dùng tự định nghĩa, đóng vai trò như một bản thiết kế (khuôn mẫu) quy định cấu trúc chung cho một nhóm đối tượng. Bản thân Class chỉ định nghĩa hình hài và tính năng chứ chưa mang giá trị dữ liệu cụ thể và chưa chiếm vùng nhớ của đối tượng trên RAM.
+
+
+* Object (Đối tượng): Là một thực thể cụ thể (instance) được tạo ra từ Class. Khi khởi tạo một Object, chương trình sẽ cấp phát một vùng nhớ riêng trên RAM cho nó. Nhiều Object có thể được sinh ra từ cùng một Class, mang chung cấu trúc nhưng sở hữu dữ liệu và trạng thái hoàn toàn độc lập với nhau.
+
+
+* Attribute (Thuộc tính): Là các biến dữ liệu được khai báo bên trong Class, dùng để lưu trữ thông tin, đặc điểm và trạng thái của Object (ví dụ: hoTen, maSV, diemTB). Giá trị của các Attribute có thể thay đổi trong suốt vòng đời hoạt động của Object.
+
+
+* Method (Phương thức): Là các hàm xử lý nằm bên trong Class, định nghĩa những hành vi hoặc thao tác mà Object có thể thực hiện (ví dụ: dangKyMonHoc(), tinhDiemTrungBinh()). Các Method có quyền truy cập, tính toán và cập nhật giá trị của các Attribute bên trong chính Object đó.
+
+
+* Constructor (Hàm khởi tạo): Là một Method đặc biệt dùng để thiết lập trạng thái ban đầu cho Object. Nó có tên trùng với tên Class (trong C++, Java, C#), không có kiểu trả về (kể cả void), và được hệ thống tự động gọi chạy ngay tại thời điểm khởi tạo Object để cấp phát tài nguyên và gán giá trị mặc định cho các Attribute.
